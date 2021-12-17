@@ -13,6 +13,7 @@ body {
 }
 
 .main {
+  position: relative;
   padding: 5.8em 1.6em;
   display: -ms-grid;
   display: grid;
@@ -21,6 +22,13 @@ body {
   min-height: 100vh;
   width: 100%;
   background: #f2f2f2;
+}
+
+.main__title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
 }
 
 .row {
@@ -66,7 +74,7 @@ body {
   border: 1px solid white;
 }
 
-.column .column__button:hover {
+.column .column__button:hover, .column .column__button:focus {
   color: white;
   background: black;
 }
