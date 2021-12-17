@@ -1,0 +1,92 @@
+@import 'variables', 'functions', 'reset';
+
+
+.main{
+    padding: 5.8em 1.6em;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: color(nt-very-light-gray);
+}
+
+.row{
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.column{
+    padding: 3.2em 3.2em;
+
+    .column__title{
+        margin-bottom: .6em;
+        font-size: $f-size-title;
+        font-family: 'Big Shoulders Display', cursive;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: color(nt-very-light-gray);
+    }
+
+    .column__text{
+        margin: 0;
+        padding: 0;
+        line-height: 1.7;
+        color: color(nt-transparent-white-text);
+
+        p{
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .column__button{
+        display: inline-block;
+        margin-top: 1.7em;
+        border-radius: 35px;
+        position: relative;
+        text-decoration: none;
+        padding: .96em 2.1em;
+        background: color(nt-very-light-gray);
+        color: black;
+        mix-blend-mode: screen;
+        border: 1px solid white;
+
+        &:hover{
+            color: white;
+            background: black;
+        }
+    }
+}
+
+.column--orange{
+    background: color(pr-bright-orange);
+}
+
+.column--blue{
+    background: color(pr-dark-cyan);
+}
+
+.column--dark-blue{
+    background: color(pr-very-dark-cyan);
+}
+
+@media (min-width: 900px){
+    .row{
+        max-width: 920px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-content: center;
+        place-items: center;
+        padding: 0;
+        margin-top: 3em;
+    }
+
+    .column{
+
+
+        .column__button{
+            margin-top: 5.5em;
+        }
+    }
+}
